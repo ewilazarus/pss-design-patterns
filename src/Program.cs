@@ -1,4 +1,5 @@
 using PucRio.PSS.DesignPatterns.Bridge;
+using PucRio.PSS.DesignPatterns.FactoryMethod;
 using System;
 using System.Collections.Generic;
 
@@ -61,7 +62,6 @@ namespace PucRio.PSS.DesignPatterns
                 deviceController.ChannelDown();
                 deviceController.TurnOff();
 
-
                 FancyRemoteController fancyDeviceController;
 
                 Console.WriteLine("\n> RADIO + FANCY REMOTE CONTROLLER:");
@@ -95,7 +95,20 @@ namespace PucRio.PSS.DesignPatterns
 			["factoryMethod"] = () =>
 			{
                 Console.WriteLine("EXECUTING THE 'FACTORY METHOD' DP EXAMPLE");
-				throw new NotImplementedException();
+
+                OAuthEngine engine;
+
+                Console.WriteLine("\n> GOOGLE:");
+                engine = new GoogleOAuthEngine();
+                engine.GetUserInformation();
+
+                Console.WriteLine("\n> FACEBOOK:");
+                engine = new FacebookOAuthEngine();
+                engine.GetUserInformation();
+
+                Console.WriteLine("\n> REDDIT:");
+                engine = new RedditOAuthEngine();
+                engine.GetUserInformation();
 			},
 			["command"] = () =>
 			{
