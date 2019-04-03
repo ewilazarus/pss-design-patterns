@@ -1,4 +1,5 @@
 using PucRio.PSS.DesignPatterns.Bridge;
+using PucRio.PSS.DesignPatterns.Command;
 using PucRio.PSS.DesignPatterns.FactoryMethod;
 using System;
 using System.Collections.Generic;
@@ -113,7 +114,20 @@ namespace PucRio.PSS.DesignPatterns
 			["command"] = () =>
 			{
                 Console.WriteLine("EXECUTING THE 'COMMAND' DP EXAMPLE");
-				throw new NotImplementedException();
+
+                var broker = new Broker();
+
+                broker.TakeOrder(new BuyStock(new Stock("GGBR4")));
+                broker.TakeOrder(new BuyStock(new Stock("GOAU4")));
+                broker.TakeOrder(new SellStock(new Stock("CSNA3")));
+                broker.TakeOrder(new BuyStock(new Stock("BRAP4")));
+                broker.TakeOrder(new SellStock(new Stock("VALE3")));
+                broker.TakeOrder(new BuyStock(new Stock("ENBR3")));
+                broker.TakeOrder(new BuyStock(new Stock("KLBN11")));
+                broker.TakeOrder(new SellStock(new Stock("SUZB3")));
+                broker.TakeOrder(new SellStock(new Stock("CSAN3")));
+
+                broker.PlaceOrders();
 			}
 		};
     }
