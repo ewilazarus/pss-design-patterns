@@ -1,6 +1,7 @@
 using PucRio.PSS.DesignPatterns.Bridge;
 using PucRio.PSS.DesignPatterns.Command;
 using PucRio.PSS.DesignPatterns.FactoryMethod;
+using PucRio.PSS.DesignPatterns.Memento;
 using System;
 using System.Collections.Generic;
 
@@ -91,7 +92,26 @@ namespace PucRio.PSS.DesignPatterns
 			["memento"] = () =>
             { 
                 Console.WriteLine("EXECUTING THE 'MEMENTO' DP EXAMPLE");
-				throw new NotImplementedException();
+
+                var textEditor = new TextEditor();
+
+                Console.WriteLine("\n> BUFFER EDIT:");
+
+                textEditor.Buffer = "Hello";
+                Console.WriteLine($"> BUFFER: {textEditor.Buffer}");
+                textEditor.Buffer += ", ";
+                Console.WriteLine($"> BUFFER: {textEditor.Buffer}");
+                textEditor.Buffer += "world";
+                Console.WriteLine($"> BUFFER: {textEditor.Buffer}");
+                textEditor.Buffer += "!";
+                Console.WriteLine($"> BUFFER: {textEditor.Buffer}");
+                textEditor.Buffer += "asdfasdfasdfasdf";
+                Console.WriteLine($"> BUFFER: {textEditor.Buffer}");
+
+                Console.WriteLine("\n> BUFFER UNDO:");
+                textEditor.Undo();
+
+                Console.WriteLine($"> BUFFER: {textEditor.Buffer}");
 			},
 			["factoryMethod"] = () =>
 			{
