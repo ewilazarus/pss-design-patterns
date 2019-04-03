@@ -3,6 +3,9 @@ using System.Collections.Generic;
 
 namespace PucRio.PSS.DesignPatterns.Command
 {
+    /// <summary>
+    /// Invoker
+    /// </summary>
     class Broker
     {
         private readonly List<IOrder> _orders = new List<IOrder>();

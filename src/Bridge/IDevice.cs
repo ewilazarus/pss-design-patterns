@@ -1,5 +1,8 @@
 namespace PucRio.PSS.DesignPatterns.Bridge
 {
+    /// <summary>
+    /// Implementor
+    /// </summary>
     interface IDevice
     {
         bool Power { get; set; }

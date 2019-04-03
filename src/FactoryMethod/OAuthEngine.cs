@@ -2,6 +2,9 @@ using System;
 
 namespace PucRio.PSS.DesignPatterns.FactoryMethod
 {
+    /// <summary>
+    /// Creator
+    /// </summary>
     abstract class OAuthEngine
     {
         protected abstract IIdentityProvider FactoryMethod();

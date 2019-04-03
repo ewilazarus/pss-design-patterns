@@ -2,6 +2,9 @@ using System;
 
 namespace PucRio.PSS.DesignPatterns.Bridge
 {
+    /// <summary>
+    /// RefinedConcreteAbstraction
+    /// </summary>
     class FancyRemoteController : RemoteController
     {
         public FancyRemoteController(IDevice device) : base(device) => _previousVolume = device.Volume;

@@ -2,6 +2,9 @@ using System;
 
 namespace PucRio.PSS.DesignPatterns.Command
 {
+    /// <summary>
+    /// Receiver
+    /// </summary>
     class Stock
     {
         public Stock(string name)

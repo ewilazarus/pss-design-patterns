@@ -2,6 +2,9 @@ using System;
 
 namespace PucRio.PSS.DesignPatterns.Memento
 {
+    /// <summary>
+    /// Originator & CareTaker
+    /// </summary>
     class TextEditor
     {
         public string Buffer

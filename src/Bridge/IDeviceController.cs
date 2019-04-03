@@ -1,5 +1,8 @@
 namespace PucRio.PSS.DesignPatterns.Bridge
 {
+    /// <summary>
+    /// Abstraction
+    /// </summary>
     interface IDeviceController
     {
         void TurnOn();

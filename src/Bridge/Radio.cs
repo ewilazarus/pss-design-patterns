@@ -2,6 +2,9 @@ using System;
 
 namespace PucRio.PSS.DesignPatterns.Bridge
 {
+    /// <summary>
+    /// ConcreteImplementor
+    /// </summary>
     class Radio : IDevice
     {
         public bool Power
