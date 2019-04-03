@@ -14,3 +14,5 @@ dos seguintes Padrões de Projeto:
 
 - Command
 
+Slides: http://bit.ly/pss-dp-20191
+
